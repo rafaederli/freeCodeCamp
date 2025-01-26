@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="styles.css">
+    <title>Customer Satisfaction Survey</title>
+  </head>
+  <body>
+    <main>
+      <h1 id="title">Customer Satisfaction Survey</h1>
+      <p id="description">Help us improve! Your feedback is important.</p>
+      <form id="survey-form">
+        <fieldset>
+          <label id="name-label" for="name">
+            Full Name<input type="text" name="name" id="name" placeholder="Enter your full name" required/>
+          </label>
+          <label id="email-label" for="email">
+            Email<input type="email" name="email" id="email" placeholder="Enter your email address" required/>
+          </label>
+          <label id="number-label" for="number">
+            Age<input type="number" name="number" id="number" min=18 max=100 placeholder="Enter your age" required/>
+          </label>
+          <label for="gender">
+            Gender
+            <select id="dropdown">
+              <option value="">Select</option>
+              <option value="Male">Male</option>
+              <option value="Female">Female</option>
+              <option value="Prefer not to inform">Prefer not to inform</option>
+            </select>
+          </label>
+        </fieldset>
+        <fieldset>
+          <legend>How do you rate our quality?</legend>
+          <label class="inline" for="excellent">
+            <input class="inline" type="radio" name="quality" id="excellent" value="excellent"/> Excellent
+          </label>
+          <label class="inline" for="good">
+            <input class="inline" type="radio" name="quality" id="good" value="good"/> Good
+          </label>
+          <label class="inline" for="average">
+            <input class="inline" type="radio" name="quality" id="average" value="average" checked/> Average
+          </label>
+          <label class="inline" for="bad">
+            <input class="inline" type="radio" name="quality" id="bad" value="bad"/> Bad
+          </label>
+        </fieldset>
+        <fieldset>
+          <legend>Would you recommend us to a friend?</legend>
+          <label class="inline" for="yes">
+            <input class="inline" type="radio" name="recommendation" id="yes" value="yes" checked/> Yes
+          </label>
+          <label class="inline" for="no">
+            <input class="inline" type="radio" name="recommendation" id="no" value="no"/> No
+          </label>
+        </fieldset>
+        <fieldset>
+          <legend>Which services did you use?</legend>
+          <label class="inline" for="purchase">
+            <input class="inline" type="checkbox" name="purchase" id="purchase" value="purchase" checked/> Product purchase
+          </label>
+          <label class="inline" for="service">
+            <input class="inline" class="inline" type="checkbox" name="service" id="service" value="service"/> Customer service
+          </label>
+          <label class="inline" for="support">
+            <input class="inline" type="checkbox" name="support" id="support" value="support"/> Technical support
+          </label>
+          <label class="inline" for="other">
+            <input class="inline" type="checkbox" name="other" id="other" value="other"/> Other
+          </label>
+          <label for="opinion">
+            Comment on your experience: <textarea name="opinion" id="opinion" placeholder="Write your detailed feedback here..."></textarea>
+          </label>
+          </label>
+          <label for="rate">
+            Rate our overall service: <input type="range" name="rate" id="rate" min="0" max="10" value="5" oninput="output.value = this.value">
+            <output name="output" id="output">5</output>
+          </label>
+        </fieldset>
+        <input type="submit" name="submit" id="submit"/>
+      </form>
+    </main>
+  </body>
+</html>
