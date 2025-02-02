@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Technical Documentation - Python</title>
+  </head>
+  <body>
+    <nav id="navbar">
+      <header>
+        <h1>Python Doc.</h1>
+        <a class="nav-link" href="#Introduction">Introduction</a>
+        <a class="nav-link" href="#Features">Features</a>
+        <a class="nav-link" href="#Installation">Installation</a>
+        <a class="nav-link" href="#Basic_Concepts">Basic Concepts</a>
+        <a class="nav-link" href="#Working_with_Lists">Working with Lists</a>
+        <a class="nav-link" href="#File_Handling">File Handling</a>
+        <a class="nav-link" href="#Popular_Libraries">Popular Libraries</a>
+        <a class="nav-link" href="#Advanced_Concepts">Advanced Concepts</a>
+        <a class="nav-link" href="#Conclusion">Conclusion</a>
+      </header>
+    </nav>
+    <main id="main-doc">
+      <h1>Technical Documentation - Python</h1>
+      <section id="Introduction" class="main-section">
+        <header>Introduction</header>
+        <p>Python is a high-level, interpreted programming language with dynamic typing. Created by  Guido van Rossum and released in 1991, Python stands out for its simplicity and readability, making it one of the most popular and widely used languages in the programming world.</p>
+      </section>
+      <section id="Features" class="main-section">
+        <header>Features</header>
+        <ul>
+          <li>
+            Simple and Readable Syntax: Python is designed to be easy to read and write.
+          </li>
+          <li>
+            Cross-platform: Python runs on various operating systems, including Windows, Linux, and macOS.
+          </li>
+          <li>
+            Libraries and Frameworks: Python has a vast range of libraries and frameworks for web development, data science, automation, artificial intelligence, and more.
+          </li>
+          <li>
+            Community-driven: The Python community is active and collaborative, offering a wealth of tutorials, examples, and support.
+          </li>
+        </ul>
+      </section>
+      <section id="Installation" class="main-section">
+        <header>Installation</header>
+        <article>
+          <h3>How to install</h3>
+          <ol>
+            <li>
+              Windows:
+              <ul>
+                <li>
+                  Go to the official Python website <a href="python.org/downloads">python.org/downloads</a> and download the Windows installer.
+                </li>
+                <li>
+                  Run the installer and follow the instructions. Be sure to check the “Add Python to PATH” option during installation.
+                </li>
+              </ul>
+            </li>
+            <li>
+              MacOS:
+              <ul>
+                <li>
+                  Python is pre-installed on macOS, but you can install the latest version using Homebrew:
+                  <pre>
+                    <code>
+                      brew install python
+                    </code>
+                  </pre>
+                </li>
+              </ul>
+            </li>
+            <li>
+              Linux:
+              <ul>
+                <li>
+                  Python is usually pre-installed on Linux. To check, type:
+                  <pre>
+                    <code>
+                      python3 --version
+                    </code>
+                  </pre>
+                </li>
+                <li>
+                  If it's not installed, use your package manager to install it:
+                  <ul>
+                    <li>
+                      Ubuntu/Debian:
+                      <pre>
+                        <code>
+                          sudo apt install python3
+                        </code>
+                      </pre>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+          </ol>
+        </article>
+      </section>
+      <section id="Basic_Concepts" class="main-section">
+        <header>Basic Concepts</header>
+        <article>
+          <h3>Variables and Data Types</h3>
+          <p>In Python, you don't need to explicitly declare the variable type. The type is inferred automatically.</p>
+          <pre>
+            <code>
+              x = 10            # Integer
+              name = "Python"   # String
+              pi = 3.14         # Float
+              active = True     # Boolean
+            </code>
+          </pre>
+        </article>
+        <article>
+          <h3>Conditional Statements</h3>
+          <p>The if statement allows you to execute blocks of code based on conditions:</p>
+          <pre>
+            <code>
+              x = 10
+              if x > 5:
+                  print("x is greater than 5")
+              else:
+                  print("x is less than or equal to 5")
+            </code>
+          </pre>
+        </article>
+        <article>
+          <h3>Loops</h3>
+          <p>The for loop allows you to iterate over a sequence of items, such as lists or strings:</p>
+          <pre>
+            <code>
+              for i in range(5):
+              print(i)
+            </code>
+          </pre>
+        </article>
+        <article>
+          <h3>Functions</h3>
+          <p>Functions in Python are defined using the def keyword:</p>
+          <pre>
+            <code>
+              def greet(name):
+                  return f"Hello, {name}!"
+
+              print(greet("World"))
+            </code>
+          </pre>
+        </article>
+      </section>
+      <section id="Working_with_Lists" class="main-section">
+        <header>Working with Lists</header>
+        <p>Lists are ordered collections that can contain items of different types.</p>
+        <pre>
+          <code>
+            fruits = ["apple", "banana", "orange"]
+            print(fruits[0])  # Accessing the first item in the list
+            fruits.append("grape")  # Adding an item
+          </code>
+        </pre>        
+      </section>
+      <section id="File_Handling" class="main-section">
+        <header>File Handling</header>
+        <p>Python allows you to easily open, read, and write files. Here's an example of reading a file:</p>
+        <pre>
+          <code>
+            with open("example.txt", "r") as file:
+            content = file.read()
+            print(content)
+          </code>
+        </pre>
+        <article>
+          <h3>Writing to Files</h3>
+          <p>To write to files, use the w mode:</p>
+          <pre>
+            <code>
+              with open("output.txt", "w") as file:
+              file.write("This is an example file")
+            </code>
+          </pre>
+        </article>
+      </section>
+      <section id="Popular_Libraries" class="main-section">
+        <header>Popular Libraries</header>
+        <article>
+          <h3>NumPy</h3>
+          <p>NumPy is a fundamental library for scientific computing. It provides support for multidimensional arrays and mathematical functions.</p>
+          <pre>
+            <code>
+              import numpy as np
+
+              arr = np.array([1, 2, 3])
+              print(arr + 1)  # Output: [2 3 4]
+            </code>
+          </pre>
+        </article>
+        <article>
+          <h3>Pandas</h3>
+          <p>Pandas is a powerful library for data analysis. It offers structures like DataFrame for working with tabular data.</p>
+          <pre>
+            <code>
+              import pandas as pd
+
+              data = pd.DataFrame({
+                  "Name": ["Ana", "John", "Maria"],
+                  "Age": [23, 34, 25]
+              })
+              print(data)
+            </code>
+          </pre>
+        </article>
+        <article>
+          <h3>Flask</h3>
+          <p>Flask is a micro-framework for web development.</p>
+          <pre>
+            <code>
+              from flask import Flask
+
+              app = Flask(__name__)
+
+              @app.route("/")
+              def hello_world():
+                  return "Hello, World!"
+
+              if __name__ == "__main__":
+                  app.run()
+            </code>
+          </pre>
+        </article>
+      </section>
+      <section id="Advanced_Concepts" class="main-section">
+        <header>Advanced Concepts</header>
+        <article>
+          <h3>Object-Oriented Programming</h3>
+          <p>Python supports object-oriented programming (OOP), allowing you to create classes and objects.</p>
+          <pre>
+            <code>
+              class Car:
+                  def __init__(self, model, color):
+                      self.model = model
+                      self.color = color
+
+                  def start(self):
+                      print(f"The {self.model} is started.")
+
+              car = Car("Fusca", "blue")
+              car.start()
+            </code>
+          </pre>
+        </article>
+        <article>
+          <h3>Exception Handling</h3>
+          <p>Exceptions can be handled using try and except to prevent the program from crashing.</p>
+          <pre>
+            <code>
+              try:
+                  result = 10 / 0
+              except ZeroDivisionError:
+                  print("Cannot divide by zero.")
+            </code>
+          </pre>
+        </article>
+      </section>
+      <section id="Conclusion" class="main-section">
+        <header>Conclusion</header>
+        <p>Python is a versatile and powerful language that can be applied in a wide range of fields, from web development to data analysis and artificial intelligence. With its simple syntax and large community, Python is an excellent choice for both beginners and experienced developers.</p>
+      </section>
+    </main>
+    <footer>
+      <p>© 2025 Python Documentation.<br />
+      All rights reserved.<br />
+      Follow us on <a href="https://github.com/python/cpython">GitHub</a> and join the Python Community.<br />
+      Python is a registered trademark of the Python Software Foundation.</p>
+    </footer>
+  </body>
+</html>
