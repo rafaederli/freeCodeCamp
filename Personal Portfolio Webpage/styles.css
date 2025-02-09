@@ -1,0 +1,193 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Roboto", serif;
+  font-weight: 400;
+}
+
+header {
+  width: 100vw;
+  height: 2rem;
+  font-size: 16px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  z-index: 1;
+}
+
+header a {
+  text-decoration: none;
+  color: black;
+}
+
+header a:hover {
+  color: #A1A5A6;
+}
+
+#navbar {
+  width: 20%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.hide {
+  display: none;
+}
+
+#about {
+  background-color: #1F2024;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  width: 30vw;
+  height: 100vh;
+  color: white;
+  padding: 5rem 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; 
+  row-gap: 1rem;
+}
+
+#about h1, h2, h3 {
+  font-weight: 400;
+}
+
+#about h1 {
+  font-size: 2rem;
+  text-align: center;
+}
+
+#about h3 {
+  font-size: 1rem;
+  text-align: left;
+}
+
+#about a {
+  text-decoration: none;
+  color: white;
+  font-weight: 200;
+}
+
+#about a:hover {
+  text-decoration: underline;
+}
+
+#about p {
+  font-weight: 200;
+  display: inline;
+  text-align: justify;
+}
+
+#about img {
+  width: 8%;
+}
+
+.about-subsection {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.5rem
+}
+
+.about-subsection h2 {
+  font-size: 1rem;
+}
+
+#welcome-section {
+  height: 100vh;
+  width: 70vw;
+  background-color: #F1F1F1;
+  margin-left: 30vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#projects {
+  height: 100vh;
+  width: 70vw;
+  margin-left: 30vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5rem 0;
+  row-gap: 2rem;
+}
+
+.article {
+  width: 80%;
+  background-color: #F1F1F1;
+  padding: 1rem;
+  text-decoration: none;
+  border-radius: 0.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  color: #28292E;
+}
+
+.article:hover {
+  box-shadow: 0 0 0.5rem 0 rgba(0, 0, 0, 0.1);
+  color: black;
+}
+
+.article img {
+  width: 20%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.article h1 {
+  font-size: 1rem;
+}
+
+.project-content {
+  display: flex;
+  align-items: center;
+  column-gap: 1rem;
+}
+
+.project-content p {
+  text-align: justify;
+  font-size: 0.8rem;
+}
+
+@media (max-width: 720px) {
+  header {
+    justify-content: center;
+    background-color: white;
+  }
+
+  #navbar {
+    width: 100%;
+  }
+
+  .hide {
+    display: inline;
+  }
+
+  #about {
+    position: static;
+    width: 100vw;
+    row-gap: 0.5rem;
+  }
+
+  #welcome-section {
+    width: 100vw;
+    background-color: #F1F1F1;
+    margin-left: 0;
+  }
+
+  #projects {
+    width: 100vw;
+    margin-left: 0;
+  }
+}
